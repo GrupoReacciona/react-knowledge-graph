@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. `NOTICE.md` contiene el SHA de commit real, copyright y texto de licencia de `codebase-memory-mcp` (sin placeholders), y `THIRD_PARTY_NOTICES.md` existe con el mismo nivel de detalle.
   5. Los packages consumidores declaran `react`, `react-dom`, `three`, `@react-three/fiber`, `@react-three/drei` como `peerDependencies`, verificable instalando el paquete en un `examples/*` real sin duplicar instancias.
 
-**Plans**: 1/8 plans executed
+**Plans**: 2/8 plans executed
 
 Plans:
 **Wave 1**
@@ -42,7 +42,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 01-02-PLAN.md — ESLint architecture guard (D-05..D-08), CI pipeline, NOTICE.md/PROJECT.md legal finalization
+- [x] 01-02-PLAN.md — ESLint architecture guard (D-05..D-08), CI pipeline, NOTICE.md/PROJECT.md legal finalization
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
@@ -104,6 +104,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repo Scaffolding & Compliance Gates | 1/8 | In Progress|  |
+| 1. Repo Scaffolding & Compliance Gates | 2/8 | In Progress|  |
 | 2. Modelo de Datos Neutral (graph-core) | 0/TBD | Not started | - |
 | 3. Componente Visor 3D Mínimo | 0/TBD | Not started | - |
