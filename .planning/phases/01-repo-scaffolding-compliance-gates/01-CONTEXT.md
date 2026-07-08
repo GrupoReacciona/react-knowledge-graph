@@ -40,6 +40,12 @@ INFRA-01/ROADMAP mencionan `packages/adapters/{codebase-memory,graphology,neo4j}
 - **D-11:** `examples/*` se crea como skeleton de proyecto Vite (`package.json` + config mínima) en Fase 1, sin app funcional — se completará con datos mock reales en Fase 3 junto con el componente (VIEWER-02).
 - **D-12:** Todos los `package.json` internos usan ya el scope `@gruporeacciona/...` (p. ej. `@gruporeacciona/graph-core`) desde Fase 1, para uso interno vía pnpm workspaces. Esto **no** equivale a publicación — la publicación pública real sigue bloqueada por aprobación interna de Reacciona (PUB-04, fuera de este tramo).
 
+### Alcance del bloqueo de licencias en CI
+
+RESEARCH.md confirmó que `pnpm licenses list` (mencionado en docs/08) no tiene flag de fail-on-violation — la CI debe usar `license-checker-rseidelsohn --failOn` con una lista SPDX explícita.
+
+- **D-13:** El gate de CI solo hace **fallar el build** (`--failOn`) para licencias `GPL`/`AGPL`/`SSPL` (lista SPDX explícita, no un prefijo genérico que pueda capturar `LGPL-3.0` por error). Las licencias de "revisión manual" (`MPL-2.0`, `LGPL`, `EPL`) **no bloquean** la CI — se permite el build pero se emite un warning visible para que un humano revise el PR. Esto resuelve el punto que quedó diferido en la discusión inicial y que tanto RESEARCH.md como PATTERNS.md volvieron a señalar de forma independiente.
+
 ### Claude's Discretion
 
 Ninguna — todas las preguntas presentadas fueron respondidas explícitamente por el usuario (no se usó la opción "decide tú" salvo la primera pregunta del área de commit fuente, donde el usuario eligió directamente `v0.8.1` en lugar de delegar).
@@ -65,6 +71,10 @@ Ninguna — todas las preguntas presentadas fueron respondidas explícitamente p
 - `.planning/REQUIREMENTS.md` — INFRA-01 a INFRA-07 (requisitos exactos de esta fase)
 - `.planning/ROADMAP.md` — Fase 1: Goal y 5 criterios de éxito verificables
 - `.planning/PROJECT.md` — Key Decisions table (a actualizar con D-04)
+
+### Research y patrones
+- `.planning/phases/01-repo-scaffolding-compliance-gates/01-RESEARCH.md` — versiones verificadas en vivo (pnpm 11.10.0, turbo 2.10.4, typescript 6.0.3, eslint 10.6.0, etc.), gaps mecánicos detectados (no-restricted-imports no bloquea `fetch()` global; `pnpm licenses list` no tiene fail-on-violation), secuenciación de tareas recomendada
+- `.planning/phases/01-repo-scaffolding-compliance-gates/01-PATTERNS.md` — bloques de código sourced para cada archivo de configuración sin análogo en el repo (0 análogos exactos; repo greenfield)
 
 </canonical_refs>
 
@@ -94,7 +104,6 @@ Ninguna — todas las preguntas presentadas fueron respondidas explícitamente p
 <deferred>
 ## Deferred Ideas
 
-- **Alcance del bloqueo de licencias en CI** (¿la CI debe bloquear también el nivel "revisión manual" — MPL/LGPL/EPL — o solo avisar?) — el usuario no seleccionó este tema para discusión. El planner/researcher debe usar el criterio por defecto de `docs/08-licensing-compliance.md`: bloquear solo GPL/AGPL/SSPL de forma estricta; MPL/LGPL/EPL requieren "revisión manual" (no hay instrucción explícita de bloqueo automático en CI para ese nivel). Si esto resulta ambiguo durante la implementación, escalar al usuario en vez de asumir.
 - **Stubs de `graphology`/`neo4j` adapters** — explícitamente diferidos a Milestone 6 (v2), fuera de este tramo (ver D-09).
 
 ### Reviewed Todos (not folded)
