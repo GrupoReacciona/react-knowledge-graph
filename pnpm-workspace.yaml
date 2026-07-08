@@ -1,0 +1,17 @@
+packages:
+  - 'packages/*'
+  - 'packages/adapters/*'
+  - 'examples/*'
+
+catalog:
+  react: ^19.2.7
+  react-dom: ^19.2.7
+  three: ^0.185.1
+  '@react-three/fiber': ^9.6.1
+  '@react-three/drei': ^10.7.7
+
+# pnpm v10+ blocks all postinstall/preinstall scripts by default ("Security by Default").
+# strictDepBuilds makes any *new* dependency that needs a lifecycle script fail loudly
+# instead of silently skipping, forcing an explicit reviewed allow-list decision.
+strictDepBuilds: true
+onlyBuiltDependencies: []

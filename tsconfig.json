@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/graph-core" },
+    { "path": "./packages/graph-renderer-three" },
+    { "path": "./packages/react-knowledge-graph" },
+    { "path": "./packages/adapters/codebase-memory" }
+  ]
+}
