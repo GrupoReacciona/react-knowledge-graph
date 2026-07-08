@@ -1,0 +1,25 @@
+{
+  "name": "@gruporeacciona/react-knowledge-graph",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gruporeacciona/graph-core": "workspace:*",
+    "@gruporeacciona/graph-renderer-three": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "three": "catalog:",
+    "@react-three/fiber": "catalog:",
+    "@react-three/drei": "catalog:"
+  },
+  "license": "MIT"
+}
