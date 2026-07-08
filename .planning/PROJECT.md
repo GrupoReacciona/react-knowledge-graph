@@ -66,7 +66,7 @@ Todos los ítems Active son hipótesis hasta que se implementen, verifiquen y co
 | Primer tramo de trabajo = Milestones 1-3 (repo base, componente React mínimo, desacoplamiento real en graph-core) | El usuario eligió el alcance más ambicioso frente a solo el scaffolding del repo | — Pending |
 | Intención de licencia: MIT, publicación open-source | Intención explícita del usuario, alineada con la recomendación de docs/08 | — Pending (requiere aprobación de publicación de Reacciona antes de hacerse pública) |
 | Fuente de extracción confirmada: github.com/DeusData/codebase-memory-mcp | Verificado vía GitHub API: MIT, público, 28.2k estrellas | ✓ Good |
-| Commit fuente fijado: tag `v0.8.1` (SHA `f0c9be19c5d74b84f418d807bfdce7b5d6a261ff`, 2026-06-12), copyright `(c) 2025 DeusData` | Decidido en discusión de Fase 1: tag etiquetado es más auditable que HEAD de main; se re-verificará en Fase 3 antes de importar código | — Pending (re-verificar en Fase 3) |
+| Commit fuente fijado: tag `v0.8.1` (SHA `f0c9be19c5d74b84f418d807bfdce7b5d6a261ff`, 2026-06-12), copyright `(c) 2025 DeusData` | Decidido en discusión de Fase 1: tag etiquetado es más auditable que HEAD de main; se re-verificará en Fase 3 antes de importar código | ✓ NOTICE.md finalizado en Fase 1 con este SHA/tag/copyright/texto MIT completo (Plan 01-02) — re-verificar en Fase 3 antes de copiar código |
 
 ## Evolution
 
