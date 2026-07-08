@@ -27,7 +27,7 @@ ADR 0003 solo prohíbe llamadas HTTP (`fetch`/`axios`/`useQuery`), no prohíbe R
 - **D-05 (`graph-core`):** bloquea `react`, `react-dom`, `three`, `@react-three/*`, y `fetch`/`axios`/`useQuery` — debe permanecer 100% framework/backend-agnostic (docs/03-architecture.md).
 - **D-06 (`react-knowledge-graph`):** bloquea `fetch`/`axios`/`useQuery` (ADR 0003) y el import directo de `three`/`@react-three/*` — el acceso a Three.js debe pasar siempre por `graph-renderer-three`, nunca directo desde la capa pública. **No** bloquea `react`/`react-dom` (uso legítimo).
 - **D-07 (`graph-renderer-three`):** bloquea `fetch`/`axios`/`useQuery` (ADR 0003 aplica a toda la pila de renderizado, no solo a la capa pública). Sí permite `react`, `three`, `@react-three/*`.
-- **D-08 (`packages/adapters/*`):** bloquea `react`, `react-dom`, `three`, `@react-three/*` — los adapters deben ser funciones puras de conversión sin efectos secundarios (docs/03-architecture.md), verificable por lint y no solo documentado.
+- **D-08 (`packages/adapters`):** bloquea `react`, `react-dom`, `three`, `@react-three/*` en todos los paquetes bajo `packages/adapters/*` — los adapters deben ser funciones puras de conversión sin efectos secundarios (docs/03-architecture.md), verificable por lint y no solo documentado.
 
 Esto hace verificable el criterio de éxito #2 del roadmap ("Un PR que introduce un import de React/Three.js o una llamada a fetch/axios/useQuery... falla el lint en CI") de forma específica por paquete, en vez de una única regla genérica ambigua.
 
