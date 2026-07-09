@@ -5,15 +5,15 @@ milestone_name: milestone
 current_phase: 01
 current_phase_name: repo-scaffolding-compliance-gates
 status: executing
-stopped_at: Completed 01-06-PLAN.md
-last_updated: "2026-07-08T13:16:12.562Z"
+stopped_at: Completed 01-07-PLAN.md
+last_updated: "2026-07-09T08:25:04.709Z"
 last_activity: 2026-07-08
 last_activity_desc: Phase 01 execution started
 progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 8
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-07-08)
 ## Current Position
 
 Phase: 01 (repo-scaffolding-compliance-gates) — EXECUTING
-Plan: 6 of 8
+Plan: 7 of 8
 Status: Ready to execute
 Last activity: 2026-07-08 — Phase 01 execution started
 
@@ -60,6 +60,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P04 | 15 | - tasks | - files |
 | Phase 01 P05 | 12 | - tasks | - files |
 | Phase 01 P06 | 15min | 2 tasks | 4 files |
+| Phase 01 P07 | ~20min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,8 @@ Recent decisions affecting current work:
 - [Phase ?]: Plan 01-04: Package Legitimacy Gate approved by human operator for three@0.185.1 (no anomalies found on npm registry).
 - [Phase ?]: Wave 4 (01-04, 01-05) executed in parallel git worktrees after enabling resolvable origin/HEAD via GitHub remote setup.
 - [Phase ?]: Plan 01-06: react-knowledge-graph scaffolded con peerDependencies (react/react-dom/three/@react-three/fiber/@react-three/drei) via catalog:, dependencias workspace:* sobre graph-core y graph-renderer-three; D-06 confirmado empíricamente (react permitido, three/@react-three/*/fetch bloqueados).
+- [Phase ?]: Plan 01-07: vite@8.1.3 y @vitejs/plugin-react@6.0.3 elegidos vía npm view (no pinneados en RESEARCH.md); legitimidad verificada (mantenedores oficiales vitejs org), sin checkpoint humano al no existir flag [SUS] como en three (Plan 01-04).
+- [Phase ?]: Plan 01-07: pnpm why react / pnpm why three confirman exactamente una versión resuelta de cada uno en todo el workspace tras añadir examples/basic-usage como consumidor real — INFRA-07 / Success Criterion #5 cerrado empíricamente.
 
 ### Pending Todos
 
@@ -102,6 +105,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-08T13:16:12.556Z
-Stopped at: Completed 01-06-PLAN.md
+Last session: 2026-07-09T08:25:04.704Z
+Stopped at: Completed 01-07-PLAN.md
 Resume file: None
