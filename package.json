@@ -11,6 +11,7 @@
   "scripts": {
     "docs:check": "echo 'Markdown docs repository - no build yet'",
     "licenses:check": "license-checker-rseidelsohn --production=false --excludePrivatePackages --failOn \"GPL-1.0-only;GPL-1.0-or-later;GPL-2.0-only;GPL-2.0-or-later;GPL-3.0-only;GPL-3.0-or-later;AGPL-1.0-only;AGPL-1.0-or-later;AGPL-3.0-only;AGPL-3.0-or-later;SSPL-1.0\"",
+    "licenses:check-unknown": "license-checker-rseidelsohn --production=false --excludePrivatePackages --unknown --summary",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck"
