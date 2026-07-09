@@ -13,7 +13,7 @@ El primer tramo de trabajo (Milestones 1-3 de `docs/07-roadmap.md`) lleva el rep
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Repo Scaffolding & Compliance Gates** - Monorepo pnpm/Turborepo con TypeScript compartido, guardas de arquitectura (ESLint) y de licencias (CI), y compliance de atribución (NOTICE.md/THIRD_PARTY_NOTICES.md) resueltos antes de escribir código de features.
+- [x] **Phase 1: Repo Scaffolding & Compliance Gates** - Monorepo pnpm/Turborepo con TypeScript compartido, guardas de arquitectura (ESLint) y de licencias (CI), y compliance de atribución (NOTICE.md/THIRD_PARTY_NOTICES.md) resueltos antes de escribir código de features. (completed 2026-07-09)
 - [ ] **Phase 2: Modelo de Datos Neutral (graph-core)** - Tipos `GraphNode`/`GraphEdge`/`NormalizedGraph`, validación Zod y utilidades de grafo, probados como genuinamente neutrales frente a un dataset no derivado de code-graph.
 - [ ] **Phase 3: Componente Visor 3D Mínimo** - `<KnowledgeGraphViewer nodes edges />` importado y adaptado desde `codebase-memory-mcp`, renderizando datos mock con interacción, cámara, encoding visual y estados explícitos, sin ninguna dependencia del backend original.
 
@@ -104,6 +104,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repo Scaffolding & Compliance Gates | 8/8 | In Progress|  |
+| 1. Repo Scaffolding & Compliance Gates | 8/8 | Complete    | 2026-07-09 |
 | 2. Modelo de Datos Neutral (graph-core) | 0/TBD | Not started | - |
 | 3. Componente Visor 3D Mínimo | 0/TBD | Not started | - |
